@@ -50,7 +50,7 @@
 
 <img width="430" alt="스크린샷 2023-08-15 오전 1 52 16" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/aeffebe0-4c4e-4a23-b208-c9ddd894ec99">
 
-- VPC Endpoint : VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
+VPC Endpoint : VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
 
 
 #### 1-1. Gateway Endpoint 
@@ -69,7 +69,13 @@
 *** 
 
 * ### 2. Storage Gateway
-- Cloud 기반 스토리지와 on premise를 연결하여 데이터 동합을 제공하는 서비스
+
+<img width="964" alt="스크린샷 2023-08-15 오전 2 51 43" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/49893c4c-26c7-41fb-a26a-3bda29c5f70f">
+
+
+Storage Gateway : Cloud 기반 스토리지와 On premise를 연결하여 데이터 동합을 제공하는 서비스
+
+
 #### 2-1. S3 File Gateway : NFS, SMB Protocol을 활용하, S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
 
 #### 2-2. FSx File Gateway : Window File Server를 위한 서비스이며, 잦은 엑세스 빈도의 데이터를 위한 로컬 캐시 지원
@@ -79,6 +85,8 @@
 - Cache Volume : 자주 사용되는 데이터는 로컬에 존재하고 나머지 데이터는 AWS에 백업
 
 #### 2-4. Tape Gateway : iSCSI 기반이며 Tape 기반 백업을 위한 서비스
+
+=> 예정된 추후 작업, 잦은 엑세스 빈도 그리고 다른 요구사항을 충족하기 위해 S3 File Gateway 선정
 
 ***
 
