@@ -92,7 +92,7 @@
 
 ## [ 07 Endpoint 구성 ]
 
-### < Gateway Endpoint for S3 >
+### 1. Gateway Endpoint for S3
 
 <img width="979" alt="01 s3 gateway endpoint " src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e42f10f8-db37-44a6-a54b-b2e9cef9471d">
 
@@ -105,7 +105,7 @@
 
 
 
-### < Interface Endpoint for Storage Gateway >
+### 2. Interface Endpoint for Storage Gateway
 
 <img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
 
