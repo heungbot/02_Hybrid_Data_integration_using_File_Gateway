@@ -92,6 +92,26 @@
 
 ## [ 07 Endpoint 구성 ]
 
+### Gateway Endpoint for S3
+
+<img width="979" alt="01 s3 gateway endpoint " src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e42f10f8-db37-44a6-a54b-b2e9cef9471d">
+
+
+<img width="1291" alt="01 s3 gateway endpoint routing table" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e311bff7-8250-480c-9da3-e26b97716295">
+
+=> Routing Table을 확인하니 Prefix list(CIDR List)로 생성한 Gateway Endpoint로 routing 하는 것을 알 수 있음
+
+
+### Interface Endpoint for Storage Gateway 
+
+<img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
+
+=> Gateway endpoint와 달리 subnet에 배치되며 ENI를 사용하기 때문에 고정 Private IP와 Security Group을 연동할 수 있음
+
+<img width="1095" alt="02 storage interface endpoint sg" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/eaf507d4-6994-4620-be27-7becbc421244">
+
+=> Storage Gateway를 사용하기 위한 port와, VPC에서 Endpoint로 향하는 요청을 인바운드룰에서 허용해줌
+
 ***
 
 ## [ 08 File Gateway 구성 ]
