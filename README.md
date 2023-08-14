@@ -48,7 +48,7 @@
 ### VPC Endpoint
 
 <img width="430" alt="스크린샷 2023-08-15 오전 1 52 16" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/aeffebe0-4c4e-4a23-b208-c9ddd894ec99">
-e-64efe0929b61">
+
 
 - Gateway Endpoint
 - Interface Endpoint
