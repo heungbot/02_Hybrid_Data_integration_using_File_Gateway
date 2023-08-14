@@ -52,14 +52,14 @@
 - VPC Endpoint : VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
 
   
-### 1. Gateway Endpoint 
+#### 1. Gateway Endpoint 
 - VPC에 위치
 - S3, DynamoDB를 지원
 - Routa table을 통해 대상 서비스에게 도달
 - Public IP를 사용하며, IAM Policy or Resource based policy를 사용하여 액세스 제한
 
 
-### 2. Interface Endpoint
+#### 2. Interface Endpoint
 - Subnet에 위치. 가용성을 위한다면 각 AZ의 subnet에 배치
 - AWS 대부분의 서비스 지원
 - Gateway Endpoint에 비해 높은 비용
