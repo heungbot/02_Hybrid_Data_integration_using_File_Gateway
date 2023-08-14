@@ -50,8 +50,23 @@
 <img width="430" alt="스크린샷 2023-08-15 오전 1 52 16" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/aeffebe0-4c4e-4a23-b208-c9ddd894ec99">
 
 
-- Gateway Endpoint
-- Interface Endpoint
+- VPC Endpoint : VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
+
+  
+1. Gateway Endpoint 
+- VPC에 위치
+- S3, DynamoDB를 지원
+- Routa table을 통해 대상 서비스에게 도달
+- Public IP를 사용하며, IAM Policy or Resource based policy를 사용하여 액세스 제한
+
+
+2. Interface Endpoint
+- Subnet에 위치. 가용성을 위한다면 각 AZ의 subnet에 배치
+- AWS 대부분의 서비스 지원
+- Gateway Endpoint에 비해 높은 비용
+- ENI(Elastic Network Interface)를 사용하기 때문에 Private IP가 할당되며, Security Group을 통해 액세스 제어
+
+
 
 ### Storage Gateway
 
