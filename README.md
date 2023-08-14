@@ -92,9 +92,10 @@
 
 ## [ 07 Endpoint 구성 ]
 
-### Gateway Endpoint for S3
+### < Gateway Endpoint for S3 >
 
 <img width="979" alt="01 s3 gateway endpoint " src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e42f10f8-db37-44a6-a54b-b2e9cef9471d">
+
 
 
 <img width="1291" alt="01 s3 gateway endpoint routing table" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e311bff7-8250-480c-9da3-e26b97716295">
@@ -102,7 +103,7 @@
 => Routing Table을 확인하니 Prefix list(CIDR List)로 생성한 Gateway Endpoint로 routing 하는 것을 알 수 있음
 
 
-### Interface Endpoint for Storage Gateway 
+### < Interface Endpoint for Storage Gateway >
 
 <img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
 
