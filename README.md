@@ -46,21 +46,21 @@
 
 ## [ 05 핵심 기술 ]
 
-* ### VPC Endpoint
+* ### 1. VPC Endpoint
 
 <img width="430" alt="스크린샷 2023-08-15 오전 1 52 16" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/aeffebe0-4c4e-4a23-b208-c9ddd894ec99">
 
 - VPC Endpoint : VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
 
 
-#### 1. Gateway Endpoint 
+#### 1-1. Gateway Endpoint 
 - VPC에 위치
 - S3, DynamoDB를 지원
 - Routa table을 통해 대상 서비스에게 도달
 - Public IP를 사용하며, IAM Policy or Resource based policy를 사용하여 액세스 제한
 
 
-#### 2. Interface Endpoint
+#### 1-2. Interface Endpoint
 - Subnet에 위치. 가용성을 위한다면 각 AZ의 subnet에 배치
 - AWS 대부분의 서비스 지원
 - Gateway Endpoint에 비해 높은 비용
@@ -68,17 +68,17 @@
 
 *** 
 
-* ### Storage Gateway
+* ### 2. Storage Gateway
 - Cloud 기반 스토리지와 on premise를 연결하여 데이터 동합을 제공하는 서비스
-#### 1. S3 File Gateway : NFS, SMB Protocol을 활용하, S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
+#### 2-1. S3 File Gateway : NFS, SMB Protocol을 활용하, S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
 
-#### 2. FSx File Gateway : Window File Server를 위한 서비스이며, 잦은 엑세스 빈도의 데이터를 위한 로컬 캐시 지원
+#### 2-2. FSx File Gateway : Window File Server를 위한 서비스이며, 잦은 엑세스 빈도의 데이터를 위한 로컬 캐시 지원
 
-#### 3. Volumne Gateway : 백업은 EBS Snapshot 형식으로 이루어 지며 Stored, Cache Volumne으로 나뉜다
+#### 2-3. Volumne Gateway : 백업은 EBS Snapshot 형식으로 이루어 지며 Stored, Cache Volumne으로 나뉜다
 - Stored Volume : 모든 데이터를 로컬에 저장 후 비동기적 AWS 백업
 - Cache Volume : 자주 사용되는 데이터는 로컬에 존재하고 나머지 데이터는 AWS에 백업
 
-#### 4. Tape Gateway : iSCSI 기반이며 Tape 기반 백업을 위한 서비스
+#### 2-4. Tape Gateway : iSCSI 기반이며 Tape 기반 백업을 위한 서비스
 
 ***
 
