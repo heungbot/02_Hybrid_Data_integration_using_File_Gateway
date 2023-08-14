@@ -19,7 +19,7 @@
 
 * 온프레미스 서버 내에서 일정 주기로 특정 Directory에 백업하고 있음
 
-* Data Lake 구축을 의논하고 있음
+* 추후 Data Lake 구축을 하고자 함
 
 * 전략과 목표의 구체화를 위해 전사 데이터의 대규모 머신러닝 학습이 예정되어 있음
 
@@ -46,6 +46,12 @@
 ## [ 05 핵심 기술 ]
 
 ### VPC Endpoint
+
+<img width="430" alt="스크린샷 2023-08-15 오전 1 52 16" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/aeffebe0-4c4e-4a23-b208-c9ddd894ec99">
+e-64efe0929b61">
+
+- Gateway Endpoint
+- Interface Endpoint
 
 ### Storage Gateway
 
