@@ -39,7 +39,8 @@
 
 ## [ 04 다이어 그램 ]
 
-<img width="1422" alt="스크린샷 2023-08-15 오전 1 44 29" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/dfdaf61f-fb62-42c8-af3e-64efe0929b61">
+<img width="1421" alt="스크린샷 2023-08-15 오전 2 35 14" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/5ecc00ac-57a4-4b0e-9c33-903ff5a24d8d">
+
 
 ***
 
@@ -67,7 +68,17 @@
 
 
 
-### Storage Gateway
+* ### Storage Gateway
+- Cloud 기반 스토리지와 on premise를 연결하여 데이터 동합을 제공하는 서비스
+1. S3 File Gateway : NFS, SMB Protocol을 활용하, S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
+
+2. FSx File Gateway : Window File Server를 위한 서비스이며, 잦은 엑세스 빈도의 데이터를 위한 로컬 캐시 지원
+
+3. Volumne Gateway : 백업은 EBS Snapshot 형식으로 이루어 지며 Stored, Cache Volumne으로 나뉜다
+- Stored Volume : 모든 데이터를 로컬에 저장 후 비동기적 AWS 백업
+- Cache Volume : 자주 사용되는 데이터는 로컬에 존재하고 나머지 데이터는 AWS에 백업
+
+4. Tape Gateway : iSCSI 기반이며 Tape 기반 백업을 위한 서비스
 
 ***
 
