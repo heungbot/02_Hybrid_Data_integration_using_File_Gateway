@@ -101,7 +101,7 @@
 
 <img width="1291" alt="01 s3 gateway endpoint routing table" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e311bff7-8250-480c-9da3-e26b97716295">
 
-=> Routing Table을 확인하니 Prefix list(CIDR List)로 생성한 Gateway Endpoint로 routing 하는 것을 알 수 있음
+=> Routing Table을 확인하니 Prefix list(CIDR List)를 생성한 Gateway Endpoint로 routing 하는 것을 알 수 있음
 
 
 
