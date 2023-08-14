@@ -1,4 +1,4 @@
-# 02 Hybrid Data integration by using File Gateway
+# 02 Hybrid Data integration using File Gateway
 
 ## [ 01 프로젝트 설명 ]
 프로젝트 명 : File Gateway를 이용한 하이브리드 데이터 동합
