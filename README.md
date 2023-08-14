@@ -39,7 +39,7 @@
 
 ## [ 04 다이어 그램 ]
 
-<img width="1426" alt="스크린샷 2023-08-15 오전 1 38 39" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/2bc2455b-0fbd-4613-8b1d-5692d7483db6">
+<img width="1422" alt="스크린샷 2023-08-15 오전 1 44 29" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/dfdaf61f-fb62-42c8-af3e-64efe0929b61">
 
 ***
 
