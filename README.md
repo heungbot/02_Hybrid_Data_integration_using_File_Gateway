@@ -52,7 +52,7 @@
 
 - VPC Endpoint : VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
 
-  
+
 #### 1. Gateway Endpoint 
 - VPC에 위치
 - S3, DynamoDB를 지원
@@ -66,7 +66,7 @@
 - Gateway Endpoint에 비해 높은 비용
 - ENI(Elastic Network Interface)를 사용하기 때문에 Private IP가 할당되며, Security Group을 통해 액세스 제어
 
-
+*** 
 
 * ### Storage Gateway
 - Cloud 기반 스토리지와 on premise를 연결하여 데이터 동합을 제공하는 서비스
