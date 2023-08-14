@@ -98,9 +98,11 @@
 
 
 
+
 <img width="1291" alt="01 s3 gateway endpoint routing table" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e311bff7-8250-480c-9da3-e26b97716295">
 
 => Routing Table을 확인하니 Prefix list(CIDR List)로 생성한 Gateway Endpoint로 routing 하는 것을 알 수 있음
+
 
 
 ### < Interface Endpoint for Storage Gateway >
@@ -108,6 +110,7 @@
 <img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
 
 => Gateway endpoint와 달리 subnet에 배치되며 ENI를 사용하기 때문에 고정 Private IP와 Security Group을 연동할 수 있음
+
 
 <img width="1095" alt="02 storage interface endpoint sg" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/eaf507d4-6994-4620-be27-7becbc421244">
 
