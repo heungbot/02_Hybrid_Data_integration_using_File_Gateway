@@ -114,7 +114,7 @@
 
 <img width="1095" alt="02 storage interface endpoint sg" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/eaf507d4-6994-4620-be27-7becbc421244">
 
-=> Storage Gateway를 사용하기 위한 port와, VPC에서 Endpoint로 향하는 요청을 인바운드룰에서 허용해줌
+=> Storage Gateway를 사용하기 위한 포트와 VPC에서 Endpoint로 향하는 요청을 인바운드 룰에서 허용
 
 ***
 
