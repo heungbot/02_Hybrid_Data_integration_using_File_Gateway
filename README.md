@@ -136,7 +136,7 @@
 
 <img width="1321" alt="스크린샷 2023-08-15 오후 1 25 14" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/ed7b949c-1faf-43e6-9773-f05f3ed1c7cc">
 
-=> Private Link를 이용하여 통신하길 원하므로, VPC Hosing -> 위에서 생성한 Storage Gateway용 Interface Endpoint를 연동
+=> Private Link를 이용하여 통신하길 원하므로, VPC Hosing -> 위에서 생성한 Storage Gateway용 "Interface Endpoint"를 연동
 
 
 
@@ -151,6 +151,28 @@
 => 약간의 대기 후 Running state 반환
 
 
+### 2. File Sharing 생성
 
+<img width="596" alt="스크린샷 2023-08-15 오후 1 39 36" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/65b17ad9-171e-4304-b040-d7776f79c07c">
+
+=> 구체적인 설정을 위해 "구성 사용자 지정" 선택
+
+<img width="571" alt="스크린샷 2023-08-15 오후 1 39 46" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e4b9f4fe-5760-43ef-91a8-9ece7fbd9a42">
+
+=> NAS 처럼 사용할 S3 bucket과 prefix를 설정
+
+<img width="583" alt="스크린샷 2023-08-15 오후 1 45 31" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/91a7c19a-9a21-4f33-93f7-85d288ea42a2">
+
+=> On premise 데이터에 대하여 잦은 Access를 원하므로 갹체의 Storage Class = Standard로 지정
+
+<img width="598" alt="스크린샷 2023-08-15 오후 1 40 44" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/248b8bda-94c2-4e71-b561-bdbc3ef45a9f">
+
+=> VPC Hosing을 통해 연결되므로 위에서 생성한 S3용 "Gateway Endpoint"를 연동 후 "생성"
+
+<img width="1144" alt="file_sharing_command" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/d78d3a4d-8703-4cf6-90e5-db14775b93e7">
+
+=> 생성한 File Share를 클릭 후 아래부분을 확인하면 위 처럼 Mount 명령어를 제공함. User의 OS에 맞게 명령어 실행
+
+*** 
 
 ## [ 09 구축 결과 ]
