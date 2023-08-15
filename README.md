@@ -130,7 +130,7 @@
 
 <img width="1321" alt="스크린샷 2023-08-15 오후 1 24 15" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/1acb6e8e-91ea-4259-a986-1e8b00daced8">
 
-#### => VM에 설치할 플랫폼 설치 후, Vmware에 접속하여 이후 Cache Volume으로 사용할 150G 로컬 디스크를 할당
+#### => VM에 설치할 플랫폼 다운로드 후, Vmware에 접속하여 이후 Cache Volume으로 사용할 150G 로컬 디스크를 할당
 
 
 
