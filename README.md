@@ -123,7 +123,7 @@
 
 => S3 Interface Endpoint와 동일 subnet에 위치. 또한 마찬가지로 AWS VPC <-> Storage Gateway 간 Private Link 사용하기 위한 Interface Endpoint 설정
 
-=> Security group 제외 모든 구성 동일
+=> Security group & interface endpoint 서비스 제외 모든 구성 동일
 
 #### 2-2 Storage Gateway Security Group 설정
 <img width="1095" alt="02 storage interface endpoint sg" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/eaf507d4-6994-4620-be27-7becbc421244">
