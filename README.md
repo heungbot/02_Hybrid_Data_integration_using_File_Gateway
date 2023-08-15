@@ -50,7 +50,7 @@
 <img width="625" alt="core_tech_endpoint" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/29a9e2a9-8f72-49ed-804f-9e40a6f733d0">
 
 
-* VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
+* #### VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
 
 
 #### 1-1. Gateway Endpoint 
@@ -74,7 +74,7 @@
 <img width="955" alt="core_tech_filegateawy" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/0be44009-7e93-4c1b-867b-631a01c8637d">
 
 
-### Storage Gateway : Cloud 기반 스토리지와 On premise를 연결하여 데이터 동합을 제공하는 서비스이며, 크게 3가지로 구분할 수 있음.
+* #### Cloud 기반 스토리지와 On premise를 연결하여 데이터 동합을 제공하는 서비스이며, 크게 아래의 3가지로 구분할 수 있음.
 
 
 #### 2-1. S3 File Gateway : NFS, SMB Protocol을 활용하, S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
