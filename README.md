@@ -176,3 +176,10 @@
 *** 
 
 ## [ 09 구축 결과 ]
+
+* Mount할 directory를 하나 만들고 위의 Mount command 실행
+'''console
+mkdir ./mnt_storage_gateway
+'''
+
+<img width="1225" alt="스크린샷 2023-08-15 오후 1 57 29" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/29ebc7ae-e32f-45c7-9ab1-c15aca5a4a6a">
