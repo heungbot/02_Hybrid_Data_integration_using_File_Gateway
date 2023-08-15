@@ -97,11 +97,13 @@
 
 <img width="1012" alt="스크린샷 2023-08-15 오후 8 02 27" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/25b998b3-f6b8-49a4-9e55-ccf7eb39b5aa">
 
-=> AWS VPC -> S3 Bucket 간의 데이터 이동 시, Private Link를 이용하기 위해 Interface Endpoint로 설정
+=> AWS VPC <-> S3 Bucket 간의 데이터 이동 시, Private Link를 이용하기 위해 Interface Endpoint로 설정
+
 
 <img width="1147" alt="스크린샷 2023-08-15 오후 8 02 33" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/24f48621-36fc-43ee-9e40-f91af924473b">
 
-=> Private DNS 위해 둘 다 Enable 시켜줌
+=> Private DNS를 이용한 통신을 위해 둘 다 Enable 시켜줌
+
 
 <img width="1362" alt="스크린샷 2023-08-15 오후 8 04 36" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e5336d87-50dc-4e5b-ab46-713a4aa994e3">
 
@@ -113,8 +115,7 @@
 
 <img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
 
-=> Gateway endpoint와 달리 subnet에 배치되며 ENI를 사용하기 때문에 고정 Private IP와 Security Group을 연동할 수 있음
-
+=> S3 Interface Endpoint와 동일 subnet에 위치. 또한 마찬가지로 AWS VPC <-> Storage Gateway 간 Private Link 사용하기 위한 Interface Endpoint 설정
 
 <img width="1095" alt="02 storage interface endpoint sg" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/eaf507d4-6994-4620-be27-7becbc421244">
 
