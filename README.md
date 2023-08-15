@@ -71,7 +71,7 @@
 
 ### 2. Storage Gateway
 
-<img width="964" alt="스크린샷 2023-08-15 오전 2 51 43" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/49893c4c-26c7-41fb-a26a-3bda29c5f70f">
+<img width="955" alt="core_tech_filegateawy" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/0be44009-7e93-4c1b-867b-631a01c8637d">
 
 
 #### Storage Gateway : Cloud 기반 스토리지와 On premise를 연결하여 데이터 동합을 제공하는 서비스
@@ -93,7 +93,7 @@
 
 ## [ 07 Endpoint 구성 ]
 
-### 1. Gateway Endpoint for S3
+### 1. Interface Endpoint for S3
 
 <img width="979" alt="01 s3 gateway endpoint " src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e42f10f8-db37-44a6-a54b-b2e9cef9471d">
 
