@@ -114,12 +114,19 @@
 => Interface Endpoint <-> S3 Bucket의 통신을 위한 Security Group. HTTPS Protocol을 사용하며, 출발지가 VPC 대역인 경우만 허용
 
 
+
+
 ### 2. Interface Endpoint for Storage Gateway
+
+#### 2-1 Storage Gateway Interface Endpoint 생성
 
 <img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
 
 => S3 Interface Endpoint와 동일 subnet에 위치. 또한 마찬가지로 AWS VPC <-> Storage Gateway 간 Private Link 사용하기 위한 Interface Endpoint 설정
 
+=> Security group 제외 모든 구성 동일
+
+#### 2-2 Storage Gateway Security Group 설정
 <img width="1095" alt="02 storage interface endpoint sg" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/eaf507d4-6994-4620-be27-7becbc421244">
 
 => Storage Gateway를 사용하기 위한 포트와 VPC에서 Endpoint로 향하는 요청을 인바운드 룰에서 허용
