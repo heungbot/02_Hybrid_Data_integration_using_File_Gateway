@@ -178,8 +178,30 @@
 ## [ 09 구축 결과 ]
 
 * Mount할 directory를 하나 만들고 위의 Mount command 실행
-'''console
+
+```
 mkdir ./mnt_storage_gateway
-'''
+```
+
 
 <img width="1225" alt="스크린샷 2023-08-15 오후 1 57 29" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/29ebc7ae-e32f-45c7-9ab1-c15aca5a4a6a">
+
+=> Mount 성공. Mount한 서버에서 아래의 command를 통해 간단한 txt file을 생성하여 Test
+
+```
+touch "heungbot is king of school" > me.txt;
+echo "test storage gateway mount" > ./mount_test.txt
+```
+<img width="547" alt="스크린샷 2023-08-15 오후 2 06 36" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/477e7726-38a3-4e49-b670-893477d8df40">
+
+=> 파일 생성 확인
+
+
+<img width="574" alt="스크린샷 2023-08-15 오후 2 06 52" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/ef531eed-4cd5-41dd-9003-303be8a58c06">
+
+=> 약 1분 뒤의 딜레이 후, S3 bucket에도 잘 업로드 되었음
+
+
+
+
+
