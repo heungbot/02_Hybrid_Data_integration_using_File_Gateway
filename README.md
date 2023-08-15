@@ -113,8 +113,7 @@
 
 => Interface Endpoint <-> S3 Bucket의 통신을 위한 Security Group. HTTPS Protocol을 사용하며, 출발지가 VPC 대역인 경우만 허용
 
-
-
+*** 
 
 ### 2. Interface Endpoint for Storage Gateway
 
