@@ -1,7 +1,7 @@
 # 02 Hybrid Data integration using File Gateway
 
 ## [ 01 프로젝트 설명 ]
-프로젝트 명 : File Gateway를 이용한 하이브리드 데이터 동합
+프로젝트 명 : File Gateway를 이용한 하이브리드 데이터 통합
 
 프로젝트 인원 : 1명
 
@@ -119,5 +119,31 @@
 ***
 
 ## [ 08 File Gateway 구성 ]
+
+### 1. Storage Gateway 생성
+
+<img width="1383" alt="스크린샷 2023-08-15 오후 1 23 58" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/b6c64f27-0659-4982-85c2-e5447fbf2407">
+
+### => VM의 Time zone과 Storage Gateway의 Time zone이 일치해야 함. ap-northeast-(Seoul)2 Region의 값 선택
+
+
+<img width="1321" alt="스크린샷 2023-08-15 오후 1 24 15" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/1acb6e8e-91ea-4259-a986-1e8b00daced8">
+
+### => VM에 설치할 플랫폼 설치 후, Vmware에 접속하여 이후 Cache Volume으로 사용할 150G 로컬 디스크를 할당
+
+<img width="1321" alt="스크린샷 2023-08-15 오후 1 25 14" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/ed7b949c-1faf-43e6-9773-f05f3ed1c7cc">
+
+### => Private Link를 이용하여 통신하길 원하므로, VPC Hosing -> 위에서 생성한 Storage Gateway용 Interface Endpoint를 연동
+
+<img width="512" alt="스크린샷 2023-08-15 오후 1 26 18" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/b987ae37-7b32-443b-a5a7-6cf1af336344">
+
+### => 위에서 할당한 150G 로컬 디스크를 Cache Storage로 추가
+
+<img width="728" alt="스크린샷 2023-08-15 오후 1 26 38" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/1c208c61-286a-422e-936d-9b65f20695d6">
+
+### => 약간의 대기 후 Running state 반환
+
+
+
 
 ## [ 09 구축 결과 ]
