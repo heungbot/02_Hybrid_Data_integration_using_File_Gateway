@@ -95,6 +95,9 @@
 
 ### 1. Interface Endpoint for S3
 
+#### => AWS에서 2023.03에 선보인 새로운 기능임. terraform 에서는 아직 지원하지 않음.
+#### 출처 : [ hashicort github ] https://github.com/hashicorp/terraform-provider-aws/issues/30041
+
 #### 1-1 S3 Interface 생성
 <img width="1012" alt="스크린샷 2023-08-15 오후 8 02 27" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/25b998b3-f6b8-49a4-9e55-ccf7eb39b5aa">
 
