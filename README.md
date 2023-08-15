@@ -95,14 +95,17 @@
 
 ### 1. Interface Endpoint for S3
 
-<img width="979" alt="01 s3 gateway endpoint " src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e42f10f8-db37-44a6-a54b-b2e9cef9471d">
+<img width="1012" alt="스크린샷 2023-08-15 오후 8 02 27" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/25b998b3-f6b8-49a4-9e55-ccf7eb39b5aa">
 
+=> AWS VPC -> S3 Bucket 간의 데이터 이동 시, Private Link를 이용하기 위해 Interface Endpoint로 설정
 
+<img width="1147" alt="스크린샷 2023-08-15 오후 8 02 33" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/24f48621-36fc-43ee-9e40-f91af924473b">
 
+=> Private DNS 위해 둘 다 Enable 시켜줌
 
-<img width="1291" alt="01 s3 gateway endpoint routing table" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e311bff7-8250-480c-9da3-e26b97716295">
+<img width="1362" alt="스크린샷 2023-08-15 오후 8 04 36" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e5336d87-50dc-4e5b-ab46-713a4aa994e3">
 
-=> Routing Table을 확인하니 Prefix list(CIDR List)를 생성한 Gateway Endpoint로 routing 하는 것을 알 수 있음
+=> Private Subnet에 배치
 
 
 
