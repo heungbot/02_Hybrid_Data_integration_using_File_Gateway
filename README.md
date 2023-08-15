@@ -47,7 +47,8 @@
 
 ### 1. VPC Endpoint
 
-<img width="430" alt="스크린샷 2023-08-15 오전 1 52 16" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/aeffebe0-4c4e-4a23-b208-c9ddd894ec99">
+<img width="625" alt="core_tech_endpoint" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/29a9e2a9-8f72-49ed-804f-9e40a6f733d0">
+
 
 #### VPC Endpoint : VPC와 AWS Service 사이의 통신을 비공개로 연결할 수 있도록 해주는 서비스이며, 이는 Gateway Endpoint와 Interface Endpoint로 나뉘어진다.
 
@@ -64,6 +65,7 @@
 - AWS 대부분의 서비스 지원
 - Gateway Endpoint에 비해 높은 비용
 - ENI(Elastic Network Interface)를 사용하기 때문에 Private IP가 할당되며, Security Group을 통해 액세스 제어
+- Public Internet을 사용하지 않는 "Private Link"
 
 *** 
 
