@@ -95,20 +95,20 @@
 
 ### 1. Interface Endpoint for S3
 
+#### 1-1 S3 Interface 생성
 <img width="1012" alt="스크린샷 2023-08-15 오후 8 02 27" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/25b998b3-f6b8-49a4-9e55-ccf7eb39b5aa">
 
 => AWS VPC <-> S3 Bucket 간의 데이터 이동 시, Private Link를 이용하기 위해 Interface Endpoint로 설정
 
-
+#### 1-2 Private DNS & Hostname 활성화
 <img width="1147" alt="스크린샷 2023-08-15 오후 8 02 33" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/24f48621-36fc-43ee-9e40-f91af924473b">
 
 => Private DNS를 이용한 통신을 위해 둘 다 Enable 시켜줌
 
-
+#### 1-3 Private Subnet 배치
 <img width="1362" alt="스크린샷 2023-08-15 오후 8 04 36" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/e5336d87-50dc-4e5b-ab46-713a4aa994e3">
 
-=> Private Subnet에 배치
-
+#### 1-4 S3 Interface Endpoint Security Group 설정
 <img width="1398" alt="s3_interface_endpoint_security_group" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/07da6129-b5d2-4633-94ca-a88c014be501">
 
 => Interface Endpoint <-> S3 Bucket의 통신을 위한 Security Group. HTTPS Protocol을 사용하며, 출발지가 VPC 대역인 경우만 허용
