@@ -109,6 +109,9 @@
 
 => Private Subnet에 배치
 
+<img width="1398" alt="s3_interface_endpoint_security_group" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/07da6129-b5d2-4633-94ca-a88c014be501">
+
+=> Interface Endpoint <-> S3 Bucket의 통신을 위한 Security Group. HTTPS Protocol을 사용하며, 출발지가 VPC 대역인 경우만 허용
 
 
 ### 2. Interface Endpoint for Storage Gateway
