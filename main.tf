@@ -26,5 +26,5 @@ module "heungbot-storage-gw" {
   DISK_ID                        = var.DISK_ID
   BUCKET_ARN                     = module.heungbot-s3.bucket_arn
   STORAGE_GATEWAY_INTERFACE_ENDPOINT_ARN     = module.heungbot-vpc.sgw-interface_endpoint_arn
-  S3_INTERFACE_ENDPOINT_DNS_NAME = module.heungbot-vpc.s3-interface_endpoint_dns_name
+  S3_INTERFACE_ENDPOINT_DNS_NAME = "not yet"
 }
