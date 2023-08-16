@@ -27,7 +27,7 @@
 
 ## [ 03 요구사항 ]
 
-* DR 구성을 위해 Cloud로 데이터 Migration 요망
+* DR 구성을 위해 Cloud로 데이터 Migration 요망
 
 * 추후 작업을 위한 다양한 서비스 활용을 위해 공급자는 AWS로 선정
 
@@ -74,7 +74,7 @@
 <img width="955" alt="core_tech_filegateawy" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/0be44009-7e93-4c1b-867b-631a01c8637d">
 
 
-* #### Cloud 기반 스토리지와 On premise를 연결하여 데이터 동합을 제공하는 서비스이며, 크게 아래의 3가지로 구분할 수 있음.
+* #### Cloud 기반 스토리지와 On premise를 연결하여 데이터 동합을 제공하는 서비스이며, 크게 아래의 3가지로 구분할 수 있음.
 
 
 #### 2-1. S3 File Gateway : NFS, SMB Protocol을 활용하, S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
@@ -103,7 +103,7 @@
 
 => AWS VPC <-> S3 Bucket 간의 데이터 이동 시, Private Link를 이용하기 위해 Interface Endpoint로 설정
 
-#### 1-2 Private DNS & Hostname 활성화
+#### 1-2 Private DNS & Hostname 활성화
 <img width="1147" alt="스크린샷 2023-08-15 오후 8 02 33" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/24f48621-36fc-43ee-9e40-f91af924473b">
 
 => Private DNS를 이용한 통신을 위해 둘 다 Enable 시켜줌
@@ -120,7 +120,7 @@
 
 ### 2. Interface Endpoint for Storage Gateway
 
-#### 2-1 Storage Gateway Interface Endpoint 생성
+#### 2-1 Storage Gateway Interface Endpoint 생성
 
 <img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
 
@@ -128,7 +128,7 @@
 
 => Security group & interface endpoint 서비스 제외 모든 구성 동일
 
-#### 2-2 Storage Gateway Security Group 설정
+#### 2-2 Storage Gateway Security Group 설정
 <img width="1095" alt="02 storage interface endpoint sg" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/eaf507d4-6994-4620-be27-7becbc421244">
 
 => Storage Gateway를 사용하기 위한 포트와 VPC에서 Endpoint로 향하는 요청을 인바운드 룰에서 허용
