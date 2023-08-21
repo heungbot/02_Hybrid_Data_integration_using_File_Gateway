@@ -27,9 +27,9 @@
 
 ## [ 03 요구사항 ]
 
-* DR 구성을 위해 Cloud로 데이터 Migration 요망
+* DR 구성을 위해 Cloud로 Data Migration 요망
 
-* 추후 작업을 위한 다양한 서비스 활용을 위해 공급자는 AWS로 선정
+* 추후 라이브 중인 다른 서비스와의 연동을 위해 공급자는 AWS로 선정
 
 * 잦은 데이터 엑세스가 예상되므로 높은 접근성 확보
 
@@ -56,16 +56,16 @@
 #### 1-1. Gateway Endpoint 
 - VPC에 위치
 - S3, DynamoDB를 지원
-- Routa table을 통해 대상 서비스에게 도달
+- Route table을 통해 대상 서비스에게 도달
 - Public IP를 사용하며, IAM Policy or Resource based policy를 사용하여 액세스 제한
 
 
 #### 1-2. Interface Endpoint
-- Subnet에 위치. 가용성을 위한다면 각 AZ의 subnet에 배치
+- Subnet에 위치. 가용성을 위한다면 각 AZ의 Subnet에 배치
 - AWS 대부분의 서비스 지원
 - Gateway Endpoint에 비해 높은 비용
 - ENI(Elastic Network Interface)를 사용하기 때문에 Private IP가 할당되며, Security Group을 통해 액세스 제어
-- Public Internet을 사용하지 않는 "Private Link"
+- Public Internet을 사용하지 않는 "Private Link" 기술을 사용
 
 *** 
 
@@ -77,15 +77,15 @@
 * #### Cloud 기반 스토리지와 On premise를 연결하여 데이터 동합을 제공하는 서비스이며, 크게 아래의 3가지로 구분할 수 있음.
 
 
-#### 2-1. S3 File Gateway : NFS, SMB Protocol을 활용하, S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
+#### 2-1. S3 File Gateway : NFS, SMB Protocol을 활용하여 S3에 저장된 데이터에 파일로 엑세스 할 수 있음. 
 
 #### 2-2. FSx File Gateway : Window File Server를 위한 서비스이며, 잦은 엑세스 빈도의 데이터를 위한 로컬 캐시 지원
 
-#### 2-3. Volumne Gateway : 백업은 EBS Snapshot 형식으로 이루어 지며 Stored, Cache Volumne으로 나뉜다
+#### 2-3. Volumn Gateway : 백업은 EBS Snapshot 형식으로 이루어 지며 Stored, Cache Volume으로 나뉨.
 - Stored Volume : 모든 데이터를 로컬에 저장 후 비동기적 AWS 백업
 - Cache Volume : 자주 사용되는 데이터는 로컬에 존재하고 나머지 데이터는 AWS에 백업
 
-#### 2-4. Tape Gateway : iSCSI 기반이며 Tape 기반 백업을 위한 서비스
+#### 2-4. Tape Gateway : iSCSI 기반이며 Tape 기반 백업을 위한 서비스.
 
 ### => 예정된 추후 작업, 잦은 엑세스 빈도 그리고 나머지 요구사항을 충족하기 위해 S3 File Gateway 선정
 
@@ -95,7 +95,7 @@
 
 ### 1. Interface Endpoint for S3
 
-#### => AWS에서 2023.03에 선보인 새로운 기능임. terraform 에서는 아직 지원하지 않음.
+#### => AWS에서 2023.03에 선보인 새로운 기능. 2023 07월 기준 terraform 에서는 아직 지원하지 않음.
 #### 출처 : [ hashicort github ] https://github.com/hashicorp/terraform-provider-aws/issues/30041
 
 #### 1-1 S3 Interface 생성
@@ -124,7 +124,7 @@
 
 <img width="1372" alt="02 storage interface endpoint config" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/6c451ddb-2b48-4116-a38a-daf18b071a26">
 
-=> S3 Interface Endpoint와 동일 subnet에 위치. 또한 마찬가지로 AWS VPC <-> Storage Gateway 간 Private Link 사용하기 위한 Interface Endpoint 설정
+=> S3 Interface Endpoint와 동일 Subnet에 위치. 또한 마찬가지로 AWS VPC <-> Storage Gateway 간 Private Link 사용하기 위한 Interface Endpoint 설정
 
 => Security group & interface endpoint 서비스 제외 모든 구성 동일
 
@@ -141,7 +141,7 @@
 
 <img width="1383" alt="스크린샷 2023-08-15 오후 1 23 58" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/b6c64f27-0659-4982-85c2-e5447fbf2407">
 
-=> VM의 Time zone과 Storage Gateway의 Time zone이 일치해야 함. ap-northeast-(Seoul)2 Region의 값 선택
+=> VM의 Time zone과 Storage Gateway의 Time zone이 일치해야 함. ap-northeast-2(Seoul) Region의 값 선택
 
 
 
@@ -153,7 +153,7 @@
 
 <img width="1321" alt="스크린샷 2023-08-15 오후 1 25 14" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/ed7b949c-1faf-43e6-9773-f05f3ed1c7cc">
 
-=> Private Link를 이용하여 통신하길 원하므로, VPC Hosing -> 위에서 생성한 Storage Gateway용 "Interface Endpoint"를 연동
+=> Private Link를 이용하여 통신하길 원하므로 VPC Hosing -> 위에서 생성한 Storage Gateway용 "Interface Endpoint"를 연동
 
 
 
@@ -184,7 +184,7 @@
 
 <img width="598" alt="스크린샷 2023-08-15 오후 1 40 44" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/248b8bda-94c2-4e71-b561-bdbc3ef45a9f">
 
-=> VPC Hosing을 통해 연결되므로 위에서 생성한 S3용 "Gateway Endpoint"를 연동 후 "생성"
+=> VPC Hosing을 통해 연결되므로 위에서 생성한 S3용 "Interface Endpoint"를 연동 후 "생성"
 
 <img width="1144" alt="file_sharing_command" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/d78d3a4d-8703-4cf6-90e5-db14775b93e7">
 
