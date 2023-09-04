@@ -11,7 +11,7 @@
 
 ***
 
-## [ 02 클라이언트 상황 ]
+## [ 02 클라이언트 상황 가정 ]
 
 * 과거 판매 매출액, 품목과 같은 사내 데이터들 온프레미스 서버에 저장해 두었음
 
@@ -25,7 +25,7 @@
 
 ***
 
-## [ 03 요구사항 ]
+## [ 03 요구사항 정의 ]
 
 * DR 구성을 위해 Cloud로 Data Migration 요망
 
@@ -37,13 +37,13 @@
 
 ***
 
-## [ 04 다이어 그램 ]
+## [ 04 다이어그램 ]
 
 <img width="1422" alt="Real_Diagram" src="https://github.com/heungbot/01_Ansible_VPN_On_Premise/assets/97264115/7c4bd87e-47a8-4149-9a49-ce5005ba6741">
 
 ***
 
-## [ 05 핵심 기술 ]
+## [ 05 핵심 서비스 소개 ]
 
 ### 1. VPC Endpoint
 
@@ -91,7 +91,7 @@
 
 ***
 
-## [ 07 Endpoint 구성 ]
+### [ 06 Interface Endpoint 구현 과정 ]
 
 ### 1. Interface Endpoint for S3
 
@@ -135,7 +135,7 @@
 
 ***
 
-## [ 08 File Gateway 구성 ]
+## [ 07 Storage Gateway 구현 과정 ]
 
 ### 1. Storage Gateway 생성
 
@@ -192,7 +192,7 @@
 
 *** 
 
-## [ 09 구축 결과 ]
+## [ 08 구축 결과 ]
 
 * Mount할 directory를 하나 만들고 위의 Mount command 실행
 
