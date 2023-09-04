@@ -192,7 +192,7 @@
 
 *** 
 
-## [ 08 구축 결과 ]
+## [ 08 테스트 및 결과 ]
 
 * Mount할 directory를 하나 만들고 위의 Mount command 실행
 
